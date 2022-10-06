@@ -1,30 +1,13 @@
 # Задайте список из вещественных чисел. Напишите программу, 
 # которая найдёт разницу между максимальным и минимальным значением дробной части элементов
 
-list = [2.3, 4, 3.5, 4.06]
-min = list[0]
-max = 0
-for i in range(len(list)):
-    
-    if max < list[i]:
-        max = list[i]
-    if min > list[i]:
-        min = list[i]
-dif = (max - int(max)) - (min - int(min))
-
-print(list)
-print(max, min)
-print(round(dif,2))
-
-
-
-exit()
 def dif (lst):
-    for e in lst:
-        print (e%1.2)
-    return e
+    new_list = []
+    for i in lst:
+        if i % 1 != 0:
+            new_list.append(round(i%1, 3))
+    return (max(new_list) - min(new_list))
 
-
-list = [2.3, 4, 3.5, 4.06]
+list = [0.05, 5, 4.32, 1, 6.987, 3]
 print (dif(list))
 
