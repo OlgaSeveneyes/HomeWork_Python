@@ -4,9 +4,7 @@
 import random
 
 num = int(input('Введите число: '))
-list1 = []
-for i in range(1, num+1):
-    list1.append(random.randint(-num, num+1))
+list1 = [random.randint(-num, num+1) for i in range(1, num+1)]
 print(list1)
 
 list_new = [i for i in list1 if list1.count(i) == 1]
